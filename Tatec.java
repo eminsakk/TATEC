@@ -198,10 +198,6 @@ public class Tatec
                 }
             });
 
-
-            // Calculate Unhappiness
-
-            //double unhappinnes = courses.stream().mapToDouble(c -> students.stream().mapToDouble(s -> s.unHappinnesCalculation(c,h,courses)).sum()).sum();
             String unHappinnesTatec = Double.toString( students.stream().mapToDouble(s -> s.unHappinnesCalculation(h,courses)).sum() / students.size()) + "\n";
 
 
@@ -228,10 +224,10 @@ public class Tatec
             courses.forEach(Course::resetTheConfigs);
 
 
+            
+            
             // Assign randomly students  at most nonzero token count at that student to courses  using streams.
             // The number of students assigned to a course should not exceed the capacity of the course.
-
-
 
 
             // Randomly assign students to courses
